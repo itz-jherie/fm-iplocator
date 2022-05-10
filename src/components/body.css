@@ -127,6 +127,9 @@ h1 {
         text-align: left;
         border-left: 1px solid hsla(0, 0%, 59%, 0.515);
     }
+    .map{
+        height: 100vh
+    }
     
     
 }

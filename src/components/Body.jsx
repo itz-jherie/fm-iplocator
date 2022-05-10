@@ -1,8 +1,10 @@
 import React, {useEffect, useState } from "react";
 import './body.css';
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import axios from "axios";
+import L from 'leaflet';
 import arrow from '../assets/images/icon-arrow.svg'
+import locationIcon from '../assets/images/icon-location.svg'
 
 //import { Handler } from "leaflet";
 
@@ -27,7 +29,7 @@ const Body = () => {
       .catch(function (response) {
         // handle error
       });
-
+      // eslint-disable-next-line
      }, [ ])
 
 
@@ -58,6 +60,13 @@ const Body = () => {
       }
       
     }
+    let icon = L.icon({
+      iconUrl: locationIcon,
+      iconRetinaUrl: locationIcon,
+      iconAnchor: [5, 55],
+      popupAnchor: [10, -44],
+      iconSize: [40, 50],
+    });
 
     return (
       <div >
@@ -87,12 +96,12 @@ const Body = () => {
       
 
           <div className="map">
-         {isFetched && <MapContainer center={[info.location.lat, info.location.lng]} zoom={14} style={{width:"100%", height:"100%"}} scrollWheelZoom={false}>
+         {isFetched && <MapContainer center={[info.location.lat, info.location.lng]} zoom={14} style={{width:"100%", height:"100%", marginTop:'15%'}} scrollWheelZoom={false}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[info.location.lat, info.location.lng]}>
+            <Marker position={[info.location.lat, info.location.lng]} icon={icon}>
               <Popup></Popup>
             </Marker>
           </MapContainer>}
