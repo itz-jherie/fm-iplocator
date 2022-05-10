@@ -96,7 +96,7 @@ const Body = () => {
       
 
           <div className="map">
-         {isFetched && <MapContainer center={[info.location.lat, info.location.lng]} zoom={14} style={{width:"100%", height:"100%", marginTop:'15%'}} scrollWheelZoom={false}>
+         {isFetched && <MapContainer center={[info.location.lat, info.location.lng]} zoom={16} style={{width:"100%", height:"100%", marginTop:'15%'}} scrollWheelZoom={false}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

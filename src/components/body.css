@@ -5,6 +5,7 @@
     border: none;
     outline: none;
     font-family: 'Rubik', sans-serif;
+    
 }
 .input-container {
     z-index: 5;
@@ -86,7 +87,7 @@ h1 {
     position: relative;
     z-index: 1;
     height: 100vh;
-    width:100vw;
+    width: 100vw;
     border: 1px solid pink;
 }
 @media screen and (min-width: 750px) {
