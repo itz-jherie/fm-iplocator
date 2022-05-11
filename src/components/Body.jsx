@@ -81,7 +81,7 @@ const Body = () => {
             </form>
              {  isFetched && <div className="info">
               <p className="first"><span>IP ADDRESS </span><br/>{info.ip}</p>
-              <p><span>LOCATIeON</span><br/>{info.location.city}</p>
+              <p><span>LOCATION</span><br/>{info.location.city}</p>
               <p><span>TIMEZONE</span><br/>UTC {info.location.timezone}</p>
               <p><span>ISP</span><br/>{info.isp}</p>
             </div>}
