@@ -10,7 +10,7 @@
 .input-container {
     position: absolute;
     z-index: 5;
-    height: 35vh;
+    height: 42vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@ h1 {
 }
 
 .info {
-    margin-top: 7%;
+    margin-top: 40px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -112,7 +112,7 @@ h1 {
         flex-direction: row;
         width: 80vw;
         padding: 15px 20px;
-        margin-top: 40px;
+        margin-top: 55px;
         justify-content: space-around;
     }.first {
         border: none !important; 
